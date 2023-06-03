@@ -5,7 +5,11 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "catologue-ef", "catologue-ef\catologue-ef.csproj", "{B060E3C8-66D4-4B08-919C-33F3C705186E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{0C6199A6-8356-4213-B224-3FF9F81E6E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{35419552-B482-4588-BCF7-38B6E111BA57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C6199A6-8356-4213-B224-3FF9F81E6E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C6199A6-8356-4213-B224-3FF9F81E6E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C6199A6-8356-4213-B224-3FF9F81E6E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C6199A6-8356-4213-B224-3FF9F81E6E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35419552-B482-4588-BCF7-38B6E111BA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35419552-B482-4588-BCF7-38B6E111BA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35419552-B482-4588-BCF7-38B6E111BA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35419552-B482-4588-BCF7-38B6E111BA57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
