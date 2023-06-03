@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "catologue-ef", "catologue-ef\catologue-ef.csproj", "{B060E3C8-66D4-4B08-919C-33F3C705186E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B060E3C8-66D4-4B08-919C-33F3C705186E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B060E3C8-66D4-4B08-919C-33F3C705186E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B060E3C8-66D4-4B08-919C-33F3C705186E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B060E3C8-66D4-4B08-919C-33F3C705186E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C775185F-1D0C-4F2D-9C9C-A5F6118BA316}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDBA9B97-3C59-43B7-8DD4-2F82B7493DB5}
+	EndGlobalSection
+EndGlobal
