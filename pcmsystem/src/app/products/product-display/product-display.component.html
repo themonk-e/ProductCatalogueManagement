@@ -1,0 +1,44 @@
+<div class="container">
+   <div fxLayoutAlign="center">
+    <h1>Available Products</h1>
+   </div>
+
+   <div fxLayoutAlign="center" fxLayout="row wrap" fxLayoutGap="30px">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>category,brand</mat-label>
+            <input type="text" name="category" matInput ngModel #category='ngModel' required>
+            <mat-error *ngIf="category.touched && (category.invalid)">invalid input</mat-error>
+        </mat-form-field>
+            <button mat-flat-button class="search-button" *ngIf="category.valid" type="submit"><mat-icon>search</mat-icon></button>
+            <button mat-flat-button disabled class="search-button" *ngIf="category.invalid"><mat-icon>search</mat-icon></button>
+            <button mat-flat-button (click)="viewAll()" type="button">View All</button>
+            <button mat-flat-button type="button" (click)="openDialog()">Add new</button>
+
+
+    </form>
+   </div>
+
+    <div *ngIf="empty">
+        <h3>No products Available</h3>
+    </div>
+
+   <div fxLayout="row" fxLayoutAlign="center" fxLayout="row wrap" fxLayoutGap="30px" *ngIf="!empty">
+    <div *ngFor="let item of listOfProducts" >
+        <mat-card class="card">
+            <div fxLayoutAlign="center" class="pimage">
+                <img src="../../../assets/carts.png" alt="cart image" width="100px" height="100px">
+            </div>
+        
+            <mat-card-header fxLayoutAlign="center">
+                <mat-card-title>{{item.productBrand}}</mat-card-title>
+                <mat-card-subtitle>{{item.productName}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-actions fxLayoutAlign="center">
+                <button mat-button (click)="viewAProduct(item.productId,item.categoryId)">View</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+   </div>
+</div>

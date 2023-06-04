@@ -20,5 +20,7 @@ namespace catologue_ef
 
 
         public void DeleteCategory (string categoryId);
+
+        public void DecrementProductCount(string categoryid);
     }
 }

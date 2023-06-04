@@ -1,0 +1,56 @@
+<div mat-dialog-content class="dialog-box" fxLayoutAlign="center" fxLayoutGap="20px">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Product Name</mat-label>
+                <input type="text" name="pName" matInput ngModel #pName='ngModel' required>
+                <mat-error *ngIf="pName.touched && (pName.invalid)">Invalid name</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Product Brand</mat-label>
+                <input type="text" name="pBrand" matInput ngModel #pBrand='ngModel' required>
+                <mat-error *ngIf="pBrand.touched && (pBrand.invalid)">Invalid brand name</mat-error>
+            </mat-form-field>
+        </div>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Product Quantity</mat-label>
+            <input type="number" name="pQuantity" matInput ngModel #pQuantity='ngModel' required>
+            <mat-error *ngIf="pQuantity.touched && (pQuantity.invalid)">Invalid Quantity</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Product Price</mat-label>
+            <input type="number" name="pPrice" matInput ngModel #pPrice='ngModel' required>
+            <mat-error *ngIf="pPrice.touched && (pPrice.invalid)">Invalid Quantity</mat-error>
+        </mat-form-field>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Product Spec</mat-label>
+                <input type="text" name="pSpec" matInput ngModel #pSpec='ngModel' >
+            
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Product Spec Value</mat-label>
+                <input type="text" name="pSpecValue" matInput ngModel #pSpecValue='ngModel' >
+              
+            </mat-form-field>
+        </div>
+
+        <br>
+        <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="5px">
+            <button mat-button class="update-buttons"
+                *ngIf="pName.valid && pBrand.valid && pPrice.valid && pQuantity.valid"
+                type="submit" (click)="onNoClick()"><span>Confirm</span></button>
+            <button mat-button disabled class="update-buttons"
+                *ngIf="pName.invalid || pBrand.invalid || pPrice.invalid || pQuantity.invalid"><span>Confirm</span></button>
+            <button mat-button class="back-buttons" type="button" (click)="onNoClick()"><span>Cancel</span></button>
+
+        </div>
+
+    </form>
+</div>

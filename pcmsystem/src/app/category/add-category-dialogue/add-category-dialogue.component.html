@@ -1,0 +1,18 @@
+<div mat-dialog-content class="dialog-box" fxLayoutAlign="center">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>Category Name</mat-label>
+            <input type="text" name="category" matInput ngModel #category='ngModel' required>
+            <mat-error *ngIf="category.touched && (category.invalid)">Invalid email format</mat-error>
+        </mat-form-field>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="5px">
+            <button mat-button class="update-buttons" *ngIf="category.valid" type="submit"
+                (click)="onNoClick()"><span>Confirm</span></button>
+            <button mat-button disabled class="update-buttons" *ngIf="category.invalid"><span>Confirm</span></button>
+            <button mat-button class="back-buttons" type="button" (click)="onNoClick()"><span>Cancel</span></button>
+            
+        </div>
+
+    </form>
+</div>

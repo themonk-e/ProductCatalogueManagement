@@ -12,35 +12,64 @@ namespace Service.Controllers
         [HttpPost("add/specs")]
         public IActionResult AddSpecs([FromBody] List<ProductSpec_m> specList)
         {
-            _logic.AddSpec(specList);
-            return Ok();
+            try
+            {
+                _logic.AddSpec(specList);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("get/speclist/{productId}")]
         public IActionResult GetSpecs([FromRoute] string productId)
         {
-            if(_logic.GetSpecs(productId).Count!=0) {
-            
-                return Ok(_logic.GetSpecs(productId));
-            }
-            else
+            try
             {
-                return NotFound();
+                if (_logic.GetSpecs(productId).Count != 0)
+                {
+
+                    return Ok(_logic.GetSpecs(productId));
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
 
         [HttpPut("update/specs")]
         public IActionResult UpdateSpecs([FromBody] List<ProductSpec_m> specList)
         {
-            _logic.UpdateSpecs(specList);
-            return Ok();
+            try
+            {
+                _logic.UpdateSpecs(specList);
+                return Ok();
+            }
+            catch(Exception ex) {
+             return BadRequest(ex.Message);
+            }
+
         }
 
         [HttpDelete("delete/spec/{productId}")]
         public IActionResult DeleteSpecs([FromRoute] string productId)
         {
-            _logic.RemoveSpec(productId);
-            return Ok();
+            try
+            {
+                _logic.RemoveSpec(productId);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
 

@@ -19,7 +19,9 @@ namespace BusinessLogic
         public int GetPoductCount(string categoryid);
 
 
-        public void DeletePoductCount(string categoryid);
+        public void DeleteCategory(string categoryid);
+
+        public void DecrementProductCount(string categoryid);
 
     }
 }

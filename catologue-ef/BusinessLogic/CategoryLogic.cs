@@ -21,7 +21,7 @@ namespace BusinessLogic
             
         }
 
-        void ICategoryLogic.DeletePoductCount(string categoryid)
+        void ICategoryLogic.DeleteCategory(string categoryid)
         {
             _repo.DeleteCategory(categoryid);
         }
@@ -52,5 +52,12 @@ namespace BusinessLogic
         {
             _repo.UpdatePoductCount(categoryid);
         }
+
+        void ICategoryLogic.DecrementProductCount(string categoryid)
+        {
+            _repo.DecrementProductCount(categoryid);
+        }
+
+
     }
 }

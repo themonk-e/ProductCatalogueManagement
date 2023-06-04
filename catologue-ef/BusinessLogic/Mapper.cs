@@ -8,7 +8,7 @@ using catologue_ef.newEntities;
 
 namespace BusinessLogic
 {
-    internal class Mapper
+    public class Mapper
     {
         public static Product Model2EF_P(Product_m pr)
         {

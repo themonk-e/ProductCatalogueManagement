@@ -48,5 +48,12 @@ namespace catologue_ef
             ct.CategoryProductCount = ct.CategoryProductCount + 1;
             _context.SaveChanges();
         }
+
+        public void DecrementProductCount(string categoryId)
+        {
+            Category ct = _context.Categories.FirstOrDefault(v => v.CategoryId == categoryId);
+            ct.CategoryProductCount = ct.CategoryProductCount>0? ct.CategoryProductCount - 1:ct.CategoryProductCount;
+            _context.SaveChanges();
+        }
     }
 }
